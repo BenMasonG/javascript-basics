@@ -64,7 +64,7 @@ const startsWith = (char, string) => string.startsWith(char);
 
 const containsVowels = (string) => /[aeiou]/i.test(string) ? true : false;
 
-const isLowerCase = (string) => /[a-z]/.test(string) && !/[A-Z]/.test(string) ? true : false;
+const isLowerCase = (string) => /[a-z]/.test(string) && !/[A-Z]/.test(string);
 
 module.exports = {
   negate,
