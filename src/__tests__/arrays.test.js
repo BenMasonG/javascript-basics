@@ -19,20 +19,20 @@ const {
 describe('getNthElement', () => {
   const array = ['cat', 'dog', 'elephant', 'fox'];
 
-  xit('returns the element at the given position', () => {
+  it('returns the element at the given position', () => {
     expect(getNthElement(0, array)).toEqual('cat');
     expect(getNthElement(2, array)).toEqual('elephant');
     expect(getNthElement(3, array)).toEqual('fox');
   });
 
-  xit('if n is greater than the number of elements, it cycles back to the start', () => {
+  it('if n is greater than the number of elements, it cycles back to the start', () => {
     expect(getNthElement(4, array)).toEqual('cat');
     expect(getNthElement(5, array)).toEqual('dog');
   });
 });
 
 describe('arrayToCSVString', () => {
-  xit('returns the array elements as a comma-seperated string', () => {
+  it('returns the array elements as a comma-seperated string', () => {
     expect(arrayToCSVString(['a', 'b', 'c', 'd'])).toEqual('a,b,c,d');
     expect(arrayToCSVString([1, 2, 3, 4, 5])).toEqual('1,2,3,4,5');
   });
@@ -121,7 +121,7 @@ describe('reverseWordsInArray', () => {
 });
 
 describe('onlyEven', () => {
-  xit('filters the array and only returns even numbers', () => {
+  it('filters the array and only returns even numbers', () => {
     expect(onlyEven([1, 2, 3, 4, 5, 6, 7, 8])).toEqual([2, 4, 6, 8]);
     expect(onlyEven([8, 9, 10, 11, 12, 13, 14, 15])).toEqual([8, 10, 12, 14]);
   });
@@ -232,7 +232,7 @@ describe('removeSpaces', () => {
 });
 
 describe('sumNumbers', () => {
-  xit('returns the sum of the numbers in the array', () => {
+  it('returns the sum of the numbers in the array', () => {
     expect(sumNumbers([1, 3, 5, 6, 2, 8])).toEqual(25);
     expect(sumNumbers([1, 3, 5])).toEqual(9);
   });

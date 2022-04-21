@@ -1,13 +1,16 @@
 const getNthElement = (index, array) => {
-  // your code here
+  if (index > array.length - 1) {
+    return array[index - array.length];
+  } else {
+    return array[index];
+  }
 };
 
-const arrayToCSVString = array => {
-  // your code here
-};
+
+
+const arrayToCSVString = array => array.toString();
 
 const csvStringToArray = string => {
-  // your code here
 };
 
 const addToArray = (element, array) => {
@@ -34,9 +37,12 @@ const reverseWordsInArray = strings => {
   // your code here
 };
 
-const onlyEven = numbers => {
-  // your code here
-};
+const onlyEven = numbers => numbers.reduce((total, evenNumbers) => {
+  if (evenNumbers % 2 === 0) {
+    total.push(evenNumbers);
+  }
+  return total;
+}, []);
 
 const removeNthElement2 = (index, array) => {
   // your code here
@@ -50,9 +56,7 @@ const removeSpaces = string => {
   // your code here
 };
 
-const sumNumbers = numbers => {
-  // your code here
-};
+const sumNumbers = numbers => numbers.reduce((total, amount) => total + amount);
 
 const sortByLastLetter = strings => {
   // your code here
