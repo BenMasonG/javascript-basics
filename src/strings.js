@@ -1,26 +1,14 @@
-function sayHello (string) {
-  // your code here
-};
+const sayHello = (string) => `Hello, ${string}!`;
 
-function uppercase (string) {
-  // your code here
-};
+const uppercase = (string) => string.toUpperCase();
 
-function lowercase (string) {
-  // your code here
-};
+const lowercase = (string) => string.toLowerCase();
 
-function countCharacters (string) {
-  // your code here
-};
+const countCharacters = (string) => string.length;
 
-function firstCharacter (string) {
-  // your code here
-};
+const firstCharacter = (string) => string.charAt(0);
 
-function firstCharacters (string, n) {
-  // your code here
-};
+const firstCharacters = (string, n) => string.slice(0, n);
 
 module.exports = {
   sayHello,
