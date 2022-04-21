@@ -1,62 +1,70 @@
-function negate(a) {
-  // your code here
+const negate = (a) => (!a);
+
+const both = (a, b) => (a && b);
+
+const either = (a, b) => (a || b);
+
+const none = (a, b) => (!a && !b);
+
+const one = (a, b) => {
+  if ((a && b) || (!a && !b)) {return false;}
+  else if (a || b) { return true;}
 };
 
-function both(a, b) {
-  // your code here
+const  truthiness = (a) => {
+  if (a) {
+    return true;}
+  else {
+    return false;}
 };
 
-function either(a, b) {
-  // your code here
+const isEqual = (a, b) => {
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-function none(a, b) {
-  // your code here
+const isGreaterThan = (a, b) => {
+  if (a > b) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-function one(a, b) {
-  // your code here
+const isLessThanOrEqualTo = (a, b) => {
+  if (a <= b) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-function truthiness(a) {
-  // your code here
+const isOdd = (a) => {
+  if (a % 2 === 1) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-function isEqual(a, b) {
-  // your code here
+const isEven = (a) => {
+  if (a % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-function isGreaterThan(a, b) {
-  // your code here
-};
+const isSquare = (a) => a >= 0 && Math.sqrt(a) % 1 === 0;
 
-function isLessThanOrEqualTo(a, b) {
-  // your code here
-};
+const startsWith = (char, string) => string.startsWith(char);
 
-function isOdd(a) {
-  // your code here
-};
+const containsVowels = (string) => /[aeiou]/i.test(string) ? true : false;
 
-function isEven(a) {
-  // your code here
-};
-
-function isSquare(a) {
-  // your code here
-};
-
-function startsWith(char, string) {
-  // your code here
-};
-
-function containsVowels(string) {
-  // your code here
-};
-
-function isLowerCase(string) {
-  // your code here
-};
+const isLowerCase = (string) => /[a-z]/.test(string) && !/[A-Z]/.test(string) ? true : false;
 
 module.exports = {
   negate,
