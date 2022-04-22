@@ -6,36 +6,24 @@ const getNthElement = (index, array) => {
   }
 };
 
-
-
 const arrayToCSVString = array => array.toString();
 
-const csvStringToArray = string => {
-};
+const csvStringToArray = string => string.split(',');
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
+  return undefined;
 };
 
-const addToArray2 = (element, array) => {
-  // your code here
-};
+const addToArray2 = (element, array) => [...array, element];
 
-const removeNthElement = (index, array) => {
-  // your code here
-};
+const removeNthElement = (index, array) => array.splice(index, 1);
 
-const numbersToStrings = numbers => {
-  // your code here
-};
+const numbersToStrings = numbers => numbers.map(String);
 
-const uppercaseWordsInArray = strings => {
-  // your code here
-};
+const uppercaseWordsInArray = strings => strings.map(element => element.toUpperCase());
 
-const reverseWordsInArray = strings => {
-  // your code here
-};
+const reverseWordsInArray = strings => strings.map(element => element.split('').reverse().join(''));
 
 const onlyEven = numbers => numbers.reduce((total, evenNumbers) => {
   if (evenNumbers % 2 === 0) {
@@ -44,23 +32,15 @@ const onlyEven = numbers => numbers.reduce((total, evenNumbers) => {
   return total;
 }, []);
 
-const removeNthElement2 = (index, array) => {
-  // your code here
-};
+const removeNthElement2 = (index, array) => array.slice(0, index).concat(array.slice(index + 1));
 
-const elementsStartingWithAVowel = strings => {
-  // your code here
-};
+const elementsStartingWithAVowel = strings => strings.filter(element => /^[aeiou]/i.test(element));
 
-const removeSpaces = string => {
-  // your code here
-};
+const removeSpaces = string => string.replace(/\s/g, '');
 
 const sumNumbers = numbers => numbers.reduce((total, amount) => total + amount);
 
-const sortByLastLetter = strings => {
-  // your code here
-};
+const sortByLastLetter = strings => strings.sort((a, b) => a[a.length - 1].charCodeAt(0) - b[b.length - 1].charCodeAt(0));
 
 module.exports = {
   getNthElement,
